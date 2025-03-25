@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 262 83% 58%; /* Purple */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 326 73% 70%; /* Pink */
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 262 83% 58%; /* Purple */
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border selection:bg-cosmic-purple/20 selection:text-white;
+  }
+  
+  html {
+    scrollbar-color: rgba(139, 92, 246, 0.5) rgba(15, 15, 18, 0.1);
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cosmic text-foreground bg-grid-pattern antialiased overflow-x-hidden;
+    background-attachment: fixed;
+  }
+
+  /* Custom scrollbar for Webkit browsers */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-cosmic/80;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-cosmic-purple/50 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-cosmic-purple/80;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl shadow-md hover:shadow-glow transition-all duration-300;
+  }
+  
+  .cosmic-input {
+    @apply bg-cosmic-gray/80 border-cosmic-purple/20 focus:border-cosmic-purple focus:ring-1 focus:ring-cosmic-purple/50 text-white rounded-xl transition-all duration-300;
+  }
+  
+  .cosmic-button {
+    @apply bg-button-gradient hover:opacity-90 text-white font-medium py-3 px-6 rounded-xl shadow-md hover:shadow-glow transition-all duration-300 flex items-center justify-center gap-2;
+  }
+
+  .cosmic-button-outline {
+    @apply bg-transparent border border-cosmic-purple/50 hover:border-cosmic-purple text-white font-medium py-3 px-6 rounded-xl shadow-md hover:shadow-glow transition-all duration-300 flex items-center justify-center gap-2;
+  }
+  
+  .cosmic-card {
+    @apply bg-cosmic-gray/40 backdrop-blur-sm border border-white/5 rounded-2xl p-6 shadow-card hover:shadow-glow transition-all duration-300;
+  }
+  
+  .star {
+    @apply w-1 h-1 bg-white rounded-full absolute animate-pulse;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+  
+  .glow-text {
+    @apply text-transparent bg-clip-text bg-button-gradient;
+    text-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
+  }
+  
+  .vintage-filter {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .vintage-filter img {
+    filter: sepia(0.3) contrast(1.1) saturate(0.9);
+  }
+  
+  .vintage-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 50%, rgba(48, 16, 52, 0.4) 100%);
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+  
+  .vintage-heading {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.5px;
+    position: relative;
+  }
+}
+
+.thumbnail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .thumbnail-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+/* Floating particles animation */
+.particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.star-small {
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  animation-name: pulse;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.star-medium {
+  width: 3px;
+  height: 3px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  animation-name: pulse;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.star-large {
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  animation-name: pulse;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 40px rgba(255, 255, 255, 0.3);
+}
+
+.glow-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, rgba(15, 15, 18, 0) 70%);
+  filter: blur(50px);
+  z-index: -1;
+}
