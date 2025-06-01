@@ -17,107 +17,19 @@ const Footer = () => {
               AI-powered thumbnail generator for content creators. Create stunning thumbnails in seconds.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white/60 hover:text-cosmic-purple transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="text-white/60 hover:text-cosmic-purple transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-white/60 hover:text-cosmic-purple transition-colors">
+              <a href="https://www.instagram.com/____neon__9/" className="text-white/60 hover:text-cosmic-purple transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-white/60 hover:text-cosmic-purple transition-colors">
+              <a href="https://www.linkedin.com/in/durga-prasad-reddy-a151382a0/" className="text-white/60 hover:text-cosmic-purple transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="text-white/60 hover:text-cosmic-purple transition-colors">
+              <a href="https://github.com/Durgaprasad-Developer" className="text-white/60 hover:text-cosmic-purple transition-colors">
                 <Github size={20} />
               </a>
             </div>
           </div>
           
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-white/70 hover:text-white transition-colors flex items-center gap-1">
-                  <ChevronRight size={16} />
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#features" className="text-white/70 hover:text-white transition-colors flex items-center gap-1">
-                  <ChevronRight size={16} />
-                  Features
-                </a>
-              </li>
-              <li>
-                <a href="#generator" className="text-white/70 hover:text-white transition-colors flex items-center gap-1">
-                  <ChevronRight size={16} />
-                  Generator
-                </a>
-              </li>
-              <li>
-                <a href="#gallery" className="text-white/70 hover:text-white transition-colors flex items-center gap-1">
-                  <ChevronRight size={16} />
-                  Gallery
-                </a>
-              </li>
-              <li>
-                <a href="#portfolio" className="text-white/70 hover:text-white transition-colors flex items-center gap-1">
-                  <ChevronRight size={16} />
-                  Portfolio
-                </a>
-              </li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-white/70 hover:text-white transition-colors flex items-center gap-1">
-                  <ChevronRight size={16} />
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white/70 hover:text-white transition-colors flex items-center gap-1">
-                  <ChevronRight size={16} />
-                  Tutorials
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white/70 hover:text-white transition-colors flex items-center gap-1">
-                  <ChevronRight size={16} />
-                  API Documentation
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white/70 hover:text-white transition-colors flex items-center gap-1">
-                  <ChevronRight size={16} />
-                  Help Center
-                </a>
-              </li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
-            <p className="text-white/70 mb-4">
-              Subscribe to our newsletter for the latest updates and features.
-            </p>
-            <div className="flex">
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="cosmic-input rounded-r-none flex-grow"
-              />
-              <button className="cosmic-button rounded-l-none px-4">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
+
         
         <div className="border-t border-white/10 pt-8 text-center">
           <p className="text-white/60 text-sm">
