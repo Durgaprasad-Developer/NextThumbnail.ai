@@ -83,26 +83,6 @@ const Navbar = () => {
           >
             Generator
           </a>
-          <a
-            href="#gallery"
-            className="text-white/80 hover:text-white transition-colors py-2"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Gallery
-          </a>
-          <a
-            href="#portfolio"
-            className="text-white/80 hover:text-white transition-colors py-2"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Portfolio
-          </a>
-          <button 
-            className="cosmic-button text-sm w-full"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Get Started <ChevronRight size={16} />
-          </button>
         </div>
       </div>
     </header>
