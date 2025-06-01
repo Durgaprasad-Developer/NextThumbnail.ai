@@ -41,8 +41,8 @@ const Index = () => {
         <Hero />
         <Features />
         <Generator />
-        <Gallery />
-        <Portfolio />
+{/*         <Gallery />
+        <Portfolio /> */}
       </main>
       <Footer />
     </div>
